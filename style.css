@@ -58,7 +58,10 @@ body {
     cursor: not-allowed;
     transform: none;
 }
-
+#stopwatchDisplay span {
+  color: #000 !important;
+  opacity: 1 !important;
+}
 /* --- Dark Theme Styles --- */
 html.dark body {
     background-color: #1a202c;
