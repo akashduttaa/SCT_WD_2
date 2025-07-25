@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" class="light"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Stopwatch App</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" xintegrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-900 transition-colors duration-300 flex flex-col min-h-screen">
+    
+    <!-- Header Section -->
+    <header class="bg-amber-400 text-white p-4 shadow-md rounded-b-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Stopwatch App</h1>
+            <!-- Dark Mode Toggle Switch -->
+            <div class="flex items-center">
+                <span class="text-white mr-2">Light</span>
+                <label for="themeToggle" class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="themeToggle" class="sr-only peer">
+                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                    <span class="ml-2 text-white">Dark</span>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area for Stopwatch -->
+    <main class="flex-grow container mx-auto p-8 flex items-center justify-center">
+        <div class="bg-white rounded-lg shadow-xl p-8 w-full max-w-md text-center transition-colors duration-300">
+            <h2 class="text-3xl font-bold text-indigo-700 mb-6">Stopwatch</h2>
+
+            <!-- Stopwatch Display -->
+            <div class="text-6xl font-mono mb-8 text-gray-950 dark:text-gray-100 transition-colors duration-300">
+                <span id="displayHours">00</span>:<span id="displayMinutes">00</span>:<span id="displaySeconds">00</span>.<span id="displayMilliseconds">000</span>
+            </div>
+
+            <!-- Control Buttons -->
+            <div class="flex justify-center space-x-4 mb-8">
+                <!-- Start Button -->
+                <button id="startButton" class="btn btn-primary">
+                    <i class="fas fa-play mr-2"></i> Start
+                </button>
+                <!-- Pause Button -->
+                <button id="pauseButton" class="btn btn-secondary" disabled>
+                    <i class="fas fa-pause mr-2"></i> Pause
+                </button>
+                <!-- Reset Button -->
+                <button id="resetButton" class="btn btn-danger" disabled>
+                    <i class="fas fa-redo mr-2"></i> Reset
+                </button>
+                <!-- Lap Button -->
+                <button id="lapButton" class="btn btn-info" disabled>
+                    <i class="fas fa-flag mr-2"></i> Lap
+                </button>
+            </div>
+
+            <!-- Lap Times Display -->
+            <div>
+                <h3 class="text-2xl font-semibold text-indigo-600 mb-4">Lap Times</h3>
+                <ul id="lapList" class="text-left bg-gray-50 dark:bg-gray-700 p-4 rounded-md max-h-60 overflow-y-auto shadow-inner transition-colors duration-300">
+                    <!-- Lap times will be inserted here by JavaScript -->
+                    <li class="text-gray-500 dark:text-gray-400">No laps recorded yet.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    
+    <footer class="footer bg-gray-800 text-white flex flex-col md:flex-row justify-between items-center p-6 mt-8 rounded-t-lg transition-colors duration-300">
+
+        <p>&copy; <span id="currentYear"></span> SkillCraft. Designed & developed by <strong>Akash Dutta</strong>.</p>
+        
+        <!-- Social media links container -->
+        <div class="socials flex space-x-4 mt-4 md:mt-0">
+            <!-- GitHub -->
+            <a href="https://github.com/akashduttaa" target="_blank" rel="noreferrer" class="text-white hover:text-indigo-400 transition-colors duration-300">
+                <i class="fab fa-github text-2xl"></i>             </a>
+            <!-- LinkedIn Link -->
+            <a href="https://linkedin.com/in/akash-dutta-ad/" target="_blank" rel="noreferrer" class="text-white hover:text-indigo-400 transition-colors duration-300">
+                <i class="fab fa-linkedin text-2xl"></i> 
+            </a>
+            <!-- Instagram Link -->
+            <a href="https://www.instagram.com/akashdutta___" target="_blank" rel="noreferrer" class="text-white hover:text-indigo-400 transition-colors duration-300">
+                <i class="fab fa-instagram text-2xl"></i> 
+            </a>
+        </div>
+    </footer>
+
+   
+    <script src="script.js"></script>
+</body>
+</html>
