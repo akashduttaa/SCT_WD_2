@@ -1,4 +1,4 @@
-# ⏱️  Stopwatch Web Application
+# ⏱️  Stopwatch Web Application :
 
 A sleek, responsive stopwatch built for precision timing and a seamless user experience. Includes core stopwatch features, lap time tracking, and a dark mode toggle — all styled with Tailwind CSS for a modern, professional look.
 
